@@ -45,4 +45,10 @@ router.get('/:id', function(req, res){
 
 })
 
+// Updating a the student
+// router.post('/:id', function(req, res{
+//   Student.
+// }))
+
+
 module.exports = router;
