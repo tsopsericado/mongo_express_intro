@@ -35,10 +35,10 @@ router.post("/", async function (req, res) {
 
 
 //Get a single student by _id
-router.get('./:id',async function(req, res){
+router.get('/:id', function(req, res){
   let id = req.params.id
  
-  Student.findBy(id)
+  Student.findById(id)
     .exec()
     .then((resp) => respHandler(res, resp))
     .catch((err) => errorHandler(res, err));
