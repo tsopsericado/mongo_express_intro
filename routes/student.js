@@ -43,12 +43,26 @@ router.get('/:id', function(req, res){
     .then((resp) => respHandler(res, resp))
     .catch((err) => errorHandler(res, err));
 
-})
+});
 
 // Updating a the student
-// router.post('/:id', function(req, res{
-//   Student.
-// }))
+router.post('/:id', function(req, res){
+  let {id} = req.params
+  let book = req.body.book 
+  Student.findByIdAndDelete(id)
+  .exec()
+  .then((resp) => respHandler(res, resp))
+  .catch((err) => errorHandler(res, err));
+});
+
+//deleting a student
+router.post('/:id', function(req, res){
+  let id = req.params.id
+  Student.findbyIdAndDelete(id)
+  .exec()
+  .then((resp) => respHandler(res, resp))
+  .catch((err) => errorHandler(res, err))
+})
 
 
 module.exports = router;

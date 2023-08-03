@@ -8,3 +8,4 @@ mongoose.connect(process.env.DATABASE_URL, {
   console.log(mongoose.connection.readyState)  
 
   module.exports = mongoose
+  
